@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(300deg, #00bfff56, #10108898, #38ff0634);
+  background-size: 180% 180%;
+  animation: anima 17s ease infinite;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+@keyframes anima {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+}
+
+.card {
+  position: relative;
+  background: #000000ad;
+  border: 2px solid cyan;
+  border-radius: 15px;
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 5px 10px rgb(0, 0, 0);
+  z-index: 1;
+  transition: all 0.4s ease-in;
+}
+.card::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0;
+  right: 0;
+  content: "";
+  background-color: rgb(29, 238, 238);
+  width: 60%;
+  height: 50%;
+  z-index: -1;
+  border-radius: 50%;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 12px;
+}
+
+.imgBox {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  border: 4px solid cyan;
+  box-shadow: 0px 0px 7px #fff;
+}
+
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card h2 span {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.rating {
+  margin: 10px 0;
+}
+.icons {
+  color: cyan;
+}
+
+.btns {
+  position: relative;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btns button {
+  background: cyan;
+  color: #000;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease-in;
+}
+
+.btns button:hover {
+  background: #66ff00;
+}
+.icons-f {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: -80%;
+  bottom: 0;
+}
+.icons-f .fa-brands {
+  margin: 6px;
+}
+.icons-f .fa-instagram {
+  color: #ffffff;
+  background: linear-gradient(
+    300deg,
+    #ffd600,
+    #ff7a00,
+    #ff0069,
+    #d300c5,
+    #7638fa
+  );
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+}
+.icons-f .fa-facebook {
+  color: #ffffff;
+  background-color: #1877f2;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+}
+.icons-f .fa-github {
+  color: #ffffff;
+  background-color: black;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+}
